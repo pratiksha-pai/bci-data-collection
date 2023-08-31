@@ -1,6 +1,6 @@
 # git commands to run
 ```
-git add .
-git commit -m "<commit-message>"
-git push
+git add . # Adds to staging area
+git commit -m "<commit-message>" # Finalizing the commit
+git push # Actually saves it
 ```
