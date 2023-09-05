@@ -17,10 +17,8 @@ def get_window_properties(prop):
 
     if prop == "window":
         return window_title, window_width, window_height, window_x, window_y
-    if prop == "window height":
-        return window_height
-    if prop == "btn":
-        return padx, pady, btn_width, btn_height
+    if prop == "gui":
+        return padx, pady, btn_width, btn_height, window_height
 
 # Creates the window
 def create_window():
@@ -38,13 +36,13 @@ def create_window():
 
 # Adds the GUI elements to the window
 def add_gui_elements(root):
+
+    # Gets the GUI element parameters parameters
+    px, py, btn_width, btn_height, window_height = get_window_properties("gui")
+
     # Creates the frame that stores the GUI elements
     frame = tk.Frame(root)
-    height = get_window_properties("window height")
-    frame.pack(pady=(height//4))
-
-    # Gets the button parameters
-    px, py, btn_width, btn_height = get_window_properties("btn")
+    frame.pack(pady=(window_height//4))
 
     # Creates the button to begin acquiring data
     def acquisition_action(root):
