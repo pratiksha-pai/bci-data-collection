@@ -1,0 +1,12 @@
+Stream of consciousness planning:
+The program will have a GUI that allows all functions to be controlled graphically
+The relevant functions include: creating protocols, viewing protocol details, NOT deleting protocols (to prevent accidents. They can be deleted from the files, also there should
+be statistics about protocol usage) (creating protocols could involve using another as a template), also includes: viewing raw data, deciding how data is processed, processing
+data, also checking the status of connected equipment. Also needs to include setting up the experiment and running the experiment
+Will need to change pages
+Running the experiment will involve a much different program structure than the menu pages
+Running the experiment will need to carry out many processes that occur at different rates
+These processes can be managed using multi-threading or processed in series. I think multithreading is the best bet 
+Now I need to consider the best way to manage user interfaces knowing what I now know
+Each window has unique processes to that window so processes and UI stuff should be kept in one script
+Each script has a startup function and a function that runs continuously while on that page
