@@ -1,14 +1,8 @@
 #Imports the necessary packages
 import tkinter as tk
+from tkinter import t
 from GUIs import main_menu_gui
 from Custom_Packages import read_write
-
-import sys
-import os
-
-# Add folder_b to sys.path
-sys.path.append('/Users/jackmostyn/Lab Scripts/bci-data-collection/Custom_Packages')
-
 
 # Stores all the properties of the windows in one place to make changes easier
 def get_window_properties(prop):
@@ -61,16 +55,16 @@ def add_gui_elements(root):
 
     # Creates a dropdown menu to select the protocol for the experiment
     # Get the options for the dropdown menu
-    options = get_dropdown_options()
+    #options = get_dropdown_options()
 
     # Creates the label for the dropdown
     dropdown_label = tk.Label(frame, text="Select an Option:")
     dropdown_label.grid(row=6, column=0, padx=px, pady=py, sticky="w")  # positioned below the entry
 
     # Creates the dropdown menu (Combobox widget)
-    dropdown = ttk.Combobox(frame, values=options, width=btn_width)
-    dropdown.grid(row=6, column=1, padx=px, pady=py)
-    dropdown.set(options[0])  # set the first option as the default value
+    # dropdown = ttk.Combobox(frame, values=options, width=btn_width)
+    # dropdown.grid(row=6, column=1, padx=px, pady=py)
+    # dropdown.set(options[0])  # set the first option as the default value
 
 
     # Creates the button to cancel the setup and return to main menu

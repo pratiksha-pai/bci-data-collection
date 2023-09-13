@@ -1,6 +1,5 @@
 import argparse
 import time
-import brainflow
 
 from brainflow.board_shim import BoardShim, BrainFlowInputParams, BoardIds, BrainFlowPresets
 
@@ -28,8 +27,10 @@ def main():
     args = parser.parse_args()
 
     params = BrainFlowInputParams()
+    params.serial_port = "COM3"
+    board = BoardShim(BoardIds.CYTON_BOARD, params)
     params.ip_port = args.ip_port
-    params.serial_port = args.serial_port
+    #params.serial_port = args.serial_port
     params.mac_address = args.mac_address
     params.other_info = args.other_info
     params.serial_number = args.serial_number
