@@ -12,5 +12,4 @@ while True:
     last_time = current_time
     print(elapsed)
 
-    pause(1)
     

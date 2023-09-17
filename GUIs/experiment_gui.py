@@ -1,12 +1,14 @@
 # Imports the necessary packages
 import tkinter as tk
+import datetime
+import os
 from GUIs import acquisition_setup_gui
 
 # Stores all the properties of the windows in one place to make changes easier
 def get_window_properties(prop):
 
     window_title = "Experiment"
-    window_width = 500
+    window_width = 1000
     window_height = 800
     window_x = 200
     window_y = 200 
@@ -49,20 +51,37 @@ def add_gui_elements(root):
         print("ending")
     exit_btn = tk.Button(frame, text="End Acquisition", command=lambda:end_acquisition(root), width=btn_width, height=btn_height)
     exit_btn.grid(row=4, column=0, padx=px, pady=py)
+
+    # Creates the button to pause data collection
+    def pause():
+        print("pausing")
+    pause_btn = tk.Button(frame, text="Pause", command=lambda:pause(), width=btn_width, height=btn_height)
+    pause_btn.grid(row=4, column=1, padx=px, pady=py)
+
+    # Creates the button to resume data collection
+    def resume():
+        print("resuming")
+    resume_btn = tk.Button(frame, text="Resume", command=lambda:resume(), width=btn_width, height=btn_height)
+    resume_btn.grid(row=4, column=2, padx=px, pady=py)
     return
+
+# Creates the file for storing data
+def create_storage(partID, protocol):
+    current_date = datetime.datetime.now()
+    formatted_date = current_date.strftime('%Y%m%d%H%M%S')
+    folderID = protocol + "_" + formatted_date + "_" + partID
+    base_path = "/Users/jackmostyn/Lab Scripts/bci-data-collection/Data"
+    folder_path = base_path + "/" + folderID
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
 
 # Opens the main menu -- called by other scripts
 def open(partID, protocol):
-    print(partID)
-    print(protocol)
-    # Creates the window
     root = create_window()
-
-    # Adds GUI elements to the window
     add_gui_elements(root)
-
-    # Start the main loop
+    create_storage(partID, protocol)
     root.mainloop()
+
 
 
 
