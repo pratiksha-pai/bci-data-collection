@@ -1,0 +1,567 @@
+Instruction #,End time,Duration,Display image id,audio id,Operator text, State,Location
+0,20,20,Blank,Instructions 1,Instructions for Acclimation Trials,None,None
+1,23,3,Bullseye 1,NA,Acclimation trial 1 throw 1,Add ,A1
+2,23.5,0.5,Bullseye 1,Throw tone,Acclimation trial 1 throw 1,Add ,A1
+3,26.5,3,Bullseye 1,NA,Acclimation trial 1 throw 2,Add ,A1
+4,27,0.5,Bullseye 1,Throw tone,Acclimation trial 1 throw 2,Add ,A1
+5,30,3,Bullseye 1,NA,Acclimation trial 1 throw 3,Add ,A1
+6,30.5,0.5,Bullseye 1,Throw tone,Acclimation trial 1 throw 3,Add ,A1
+7,45.5,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 1,Save ,A1
+8,48.5,3,Bullseye 1,NA,Acclimation trial 2 throw 1,Add ,A2
+9,49,0.5,Bullseye 1,Throw tone,Acclimation trial 2 throw 1,Add ,A2
+10,52,3,Bullseye 1,NA,Acclimation trial 2 throw 2,Add ,A2
+11,52.5,0.5,Bullseye 1,Throw tone,Acclimation trial 2 throw 2,Add ,A2
+12,55.5,3,Bullseye 1,NA,Acclimation trial 2 throw 3,Add ,A2
+13,56,0.5,Bullseye 1,Throw tone,Acclimation trial 2 throw 3,Add ,A2
+14,71,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 2,Save ,A2
+15,74,3,Bullseye 1,NA,Acclimation trial 3 throw 1,Add ,A3
+16,74.5,0.5,Bullseye 1,Throw tone,Acclimation trial 3 throw 1,Add ,A3
+17,77.5,3,Bullseye 1,NA,Acclimation trial 3 throw 2,Add ,A3
+18,78,0.5,Bullseye 1,Throw tone,Acclimation trial 3 throw 2,Add ,A3
+19,81,3,Bullseye 1,NA,Acclimation trial 3 throw 3,Add ,A3
+20,81.5,0.5,Bullseye 1,Throw tone,Acclimation trial 3 throw 3,Add ,A3
+21,96.5,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 3,Save ,A3
+22,99.5,3,Bullseye 1,NA,Acclimation trial 4 throw 1,Add ,A4
+23,100,0.5,Bullseye 1,Throw tone,Acclimation trial 4 throw 1,Add ,A4
+24,103,3,Bullseye 1,NA,Acclimation trial 4 throw 2,Add ,A4
+25,103.5,0.5,Bullseye 1,Throw tone,Acclimation trial 4 throw 2,Add ,A4
+26,106.5,3,Bullseye 1,NA,Acclimation trial 4 throw 3,Add ,A4
+27,107,0.5,Bullseye 1,Throw tone,Acclimation trial 4 throw 3,Add ,A4
+28,122,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 4,Save ,A4
+29,125,3,Bullseye 1,NA,Acclimation trial 5 throw 1,Add ,A5
+30,125.5,0.5,Bullseye 1,Throw tone,Acclimation trial 5 throw 1,Add ,A5
+31,128.5,3,Bullseye 1,NA,Acclimation trial 5 throw 2,Add ,A5
+32,129,0.5,Bullseye 1,Throw tone,Acclimation trial 5 throw 2,Add ,A5
+33,132,3,Bullseye 1,NA,Acclimation trial 5 throw 3,Add ,A5
+34,132.5,0.5,Bullseye 1,Throw tone,Acclimation trial 5 throw 3,Add ,A5
+35,147.5,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 5,Save ,A5
+36,150.5,3,Bullseye 1,NA,Acclimation trial 6 throw 1,Add ,A6
+37,151,0.5,Bullseye 1,Throw tone,Acclimation trial 6 throw 1,Add ,A6
+38,154,3,Bullseye 1,NA,Acclimation trial 6 throw 2,Add ,A6
+39,154.5,0.5,Bullseye 1,Throw tone,Acclimation trial 6 throw 2,Add ,A6
+40,157.5,3,Bullseye 1,NA,Acclimation trial 6 throw 3,Add ,A6
+41,158,0.5,Bullseye 1,Throw tone,Acclimation trial 6 throw 3,Add ,A6
+42,173,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 6,Save ,A6
+43,176,3,Bullseye 1,NA,Acclimation trial 7 throw 1,Add ,A7
+44,176.5,0.5,Bullseye 1,Throw tone,Acclimation trial 7 throw 1,Add ,A7
+45,179.5,3,Bullseye 1,NA,Acclimation trial 7 throw 2,Add ,A7
+46,180,0.5,Bullseye 1,Throw tone,Acclimation trial 7 throw 2,Add ,A7
+47,183,3,Bullseye 1,NA,Acclimation trial 7 throw 3,Add ,A7
+48,183.5,0.5,Bullseye 1,Throw tone,Acclimation trial 7 throw 3,Add ,A7
+49,198.5,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 7,Save ,A7
+50,201.5,3,Bullseye 1,NA,Acclimation trial 8 throw 1,Add ,A8
+51,202,0.5,Bullseye 1,Throw tone,Acclimation trial 8 throw 1,Add ,A8
+52,205,3,Bullseye 1,NA,Acclimation trial 8 throw 2,Add ,A8
+53,205.5,0.5,Bullseye 1,Throw tone,Acclimation trial 8 throw 2,Add ,A8
+54,208.5,3,Bullseye 1,NA,Acclimation trial 8 throw 3,Add ,A8
+55,209,0.5,Bullseye 1,Throw tone,Acclimation trial 8 throw 3,Add ,A8
+56,224,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 8,Save ,A8
+57,227,3,Bullseye 1,NA,Acclimation trial 9 throw 1,Add ,A9
+58,227.5,0.5,Bullseye 1,Throw tone,Acclimation trial 9 throw 1,Add ,A9
+59,230.5,3,Bullseye 1,NA,Acclimation trial 9 throw 2,Add ,A9
+60,231,0.5,Bullseye 1,Throw tone,Acclimation trial 9 throw 2,Add ,A9
+61,234,3,Bullseye 1,NA,Acclimation trial 9 throw 3,Add ,A9
+62,234.5,0.5,Bullseye 1,Throw tone,Acclimation trial 9 throw 3,Add ,A9
+63,249.5,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 9,Save ,A9
+64,252.5,3,Bullseye 1,NA,Acclimation trial 10 throw 1,Add,A10
+65,253,0.5,Bullseye 1,Throw tone,Acclimation trial 10 throw 1,Add,A10
+66,256,3,Bullseye 1,NA,Acclimation trial 10 throw 2,Add,A10
+67,256.5,0.5,Bullseye 1,Throw tone,Acclimation trial 10 throw 2,Add,A10
+68,259.5,3,Bullseye 1,NA,Acclimation trial 10 throw 3,Add,A10
+69,260,0.5,Bullseye 1,Throw tone,Acclimation trial 10 throw 3,Add,A10
+70,275,15,Collect darts,Collect darts,Collecting darts for Acclimation trial 10,Add,A10
+71,295,20,Blank,Instructions 2,Instructions for Training 1,None,None
+72,298,3,Offset 1,NA,Training 1 trial 1 throw 1,Add ,B1
+73,298.5,0.5,Offset 1,Throw tone,Training 1 trial 1 throw 1,Add ,B1
+74,301.5,3,Offset 1,NA,Training 1 trial 1 throw 2,Add ,B1
+75,302,0.5,Offset 1,Throw tone,Training 1 trial 1 throw 2,Add ,B1
+76,305,3,Offset 1,NA,Training 1 trial 1 throw 3,Add ,B1
+77,305.5,0.5,Offset 1,Throw tone,Training 1 trial 1 throw 3,Add ,B1
+78,320.5,15,Collect darts,Collect darts,Collecting darts for Training trial 1,Save ,B1
+79,323.5,3,Offset 1,NA,Training 1 trial 2 throw 1,Add ,B2
+80,324,0.5,Offset 1,Throw tone,Training 1 trial 2 throw 1,Add ,B2
+81,327,3,Offset 1,NA,Training 1 trial 2 throw 2,Add ,B2
+82,327.5,0.5,Offset 1,Throw tone,Training 1 trial 2 throw 2,Add ,B2
+83,330.5,3,Offset 1,NA,Training 1 trial 2 throw 3,Add ,B2
+84,331,0.5,Offset 1,Throw tone,Training 1 trial 2 throw 3,Add ,B2
+85,346,15,Collect darts,Collect darts,Collecting darts for Training trial 2,Save ,B2
+86,349,3,Offset 1,NA,Training 1 trial 3 throw 1,Add ,B3
+87,349.5,0.5,Offset 1,Throw tone,Training 1 trial 3 throw 1,Add ,B3
+88,352.5,3,Offset 1,NA,Training 1 trial 3 throw 2,Add ,B3
+89,353,0.5,Offset 1,Throw tone,Training 1 trial 3 throw 2,Add ,B3
+90,356,3,Offset 1,NA,Training 1 trial 3 throw 3,Add ,B3
+91,356.5,0.5,Offset 1,Throw tone,Training 1 trial 3 throw 3,Add ,B3
+92,371.5,15,Collect darts,Collect darts,Collecting darts for Training trial 3,Save ,B3
+93,374.5,3,Offset 1,NA,Training 1 trial 4 throw 1,Add ,B4
+94,375,0.5,Offset 1,Throw tone,Training 1 trial 4 throw 1,Add ,B4
+95,378,3,Offset 1,NA,Training 1 trial 4 throw 2,Add ,B4
+96,378.5,0.5,Offset 1,Throw tone,Training 1 trial 4 throw 2,Add ,B4
+97,381.5,3,Offset 1,NA,Training 1 trial 4 throw 3,Add ,B4
+98,382,0.5,Offset 1,Throw tone,Training 1 trial 4 throw 3,Add ,B4
+99,397,15,Collect darts,Collect darts,Collecting darts for Training trial 4,Save ,B4
+100,400,3,Offset 1,NA,Training 1 trial 5 throw 1,Add ,B5
+101,400.5,0.5,Offset 1,Throw tone,Training 1 trial 5 throw 1,Add ,B5
+102,403.5,3,Offset 1,NA,Training 1 trial 5 throw 2,Add ,B5
+103,404,0.5,Offset 1,Throw tone,Training 1 trial 5 throw 2,Add ,B5
+104,407,3,Offset 1,NA,Training 1 trial 5 throw 3,Add ,B5
+105,407.5,0.5,Offset 1,Throw tone,Training 1 trial 5 throw 3,Add ,B5
+106,422.5,15,Collect darts,Collect darts,Collecting darts for Training trial 5,Save ,B5
+107,425.5,3,Offset 1,NA,Training 1 trial 6 throw 1,Add ,B6
+108,426,0.5,Offset 1,Throw tone,Training 1 trial 6 throw 1,Add ,B6
+109,429,3,Offset 1,NA,Training 1 trial 6 throw 2,Add ,B6
+110,429.5,0.5,Offset 1,Throw tone,Training 1 trial 6 throw 2,Add ,B6
+111,432.5,3,Offset 1,NA,Training 1 trial 6 throw 3,Add ,B6
+112,433,0.5,Offset 1,Throw tone,Training 1 trial 6 throw 3,Add ,B6
+113,448,15,Collect darts,Collect darts,Collecting darts for Training trial 6,Save ,B6
+114,451,3,Offset 1,NA,Training 1 trial 7 throw 1,Add ,B7
+115,451.5,0.5,Offset 1,Throw tone,Training 1 trial 7 throw 1,Add ,B7
+116,454.5,3,Offset 1,NA,Training 1 trial 7 throw 2,Add ,B7
+117,455,0.5,Offset 1,Throw tone,Training 1 trial 7 throw 2,Add ,B7
+118,458,3,Offset 1,NA,Training 1 trial 7 throw 3,Add ,B7
+119,458.5,0.5,Offset 1,Throw tone,Training 1 trial 7 throw 3,Add ,B7
+120,473.5,15,Collect darts,Collect darts,Collecting darts for Training trial 7,Save ,B7
+121,476.5,3,Offset 1,NA,Training 1 trial 8 throw 1,Add ,B8
+122,477,0.5,Offset 1,Throw tone,Training 1 trial 8 throw 1,Add ,B8
+123,480,3,Offset 1,NA,Training 1 trial 8 throw 2,Add ,B8
+124,480.5,0.5,Offset 1,Throw tone,Training 1 trial 8 throw 2,Add ,B8
+125,483.5,3,Offset 1,NA,Training 1 trial 8 throw 3,Add ,B8
+126,484,0.5,Offset 1,Throw tone,Training 1 trial 8 throw 3,Add ,B8
+127,499,15,Collect darts,Collect darts,Collecting darts for Training trial 8,Save ,B8
+128,502,3,Offset 1,NA,Training 1 trial 9 throw 1,Add ,B9
+129,502.5,0.5,Offset 1,Throw tone,Training 1 trial 9 throw 1,Add ,B9
+130,505.5,3,Offset 1,NA,Training 1 trial 9 throw 2,Add ,B9
+131,506,0.5,Offset 1,Throw tone,Training 1 trial 9 throw 2,Add ,B9
+132,509,3,Offset 1,NA,Training 1 trial 9 throw 3,Add ,B9
+133,509.5,0.5,Offset 1,Throw tone,Training 1 trial 9 throw 3,Add ,B9
+134,524.5,15,Collect darts,Collect darts,Collecting darts for Training trial 9,Save ,B9
+135,527.5,3,Offset 1,NA,Training 1 trial 10 throw 1,Add ,B10
+136,528,0.5,Offset 1,Throw tone,Training 1 trial 10 throw 1,Add ,B10
+137,531,3,Offset 1,NA,Training 1 trial 10 throw 2,Add ,B10
+138,531.5,0.5,Offset 1,Throw tone,Training 1 trial 10 throw 2,Add ,B10
+139,534.5,3,Offset 1,NA,Training 1 trial 10 throw 3,Add ,B10
+140,535,0.5,Offset 1,Throw tone,Training 1 trial 10 throw 3,Add ,B10
+141,550,15,Collect darts,Collect darts,Collecting darts for Training trial 10,Save ,B10
+142,553,3,Offset 1,NA,Training 1 trial 11 throw 1,Add ,B11
+143,553.5,0.5,Offset 1,Throw tone,Training 1 trial 11 throw 1,Add ,B11
+144,556.5,3,Offset 1,NA,Training 1 trial 11 throw 2,Add ,B11
+145,557,0.5,Offset 1,Throw tone,Training 1 trial 11 throw 2,Add ,B11
+146,560,3,Offset 1,NA,Training 1 trial 11 throw 3,Add ,B11
+147,560.5,0.5,Offset 1,Throw tone,Training 1 trial 11 throw 3,Add ,B11
+148,575.5,15,Collect darts,Collect darts,Collecting darts for Training trial 11,Save ,B11
+149,578.5,3,Offset 1,NA,Training 1 trial 12 throw 1,Add ,B12
+150,579,0.5,Offset 1,Throw tone,Training 1 trial 12 throw 1,Add ,B12
+151,582,3,Offset 1,NA,Training 1 trial 12 throw 2,Add ,B12
+152,582.5,0.5,Offset 1,Throw tone,Training 1 trial 12 throw 2,Add ,B12
+153,585.5,3,Offset 1,NA,Training 1 trial 12 throw 3,Add ,B12
+154,586,0.5,Offset 1,Throw tone,Training 1 trial 12 throw 3,Add ,B12
+155,601,15,Collect darts,Collect darts,Collecting darts for Training trial 12,Save ,B12
+156,604,3,Offset 1,NA,Training 1 trial 13 throw 1,Add ,B13
+157,604.5,0.5,Offset 1,Throw tone,Training 1 trial 13 throw 1,Add ,B13
+158,607.5,3,Offset 1,NA,Training 1 trial 13 throw 2,Add ,B13
+159,608,0.5,Offset 1,Throw tone,Training 1 trial 13 throw 2,Add ,B13
+160,611,3,Offset 1,NA,Training 1 trial 13 throw 3,Add ,B13
+161,611.5,0.5,Offset 1,Throw tone,Training 1 trial 13 throw 3,Add ,B13
+162,626.5,15,Collect darts,Collect darts,Collecting darts for Training trial 13,Save ,B13
+163,629.5,3,Offset 1,NA,Training 1 trial 14 throw 1,Add ,B14
+164,630,0.5,Offset 1,Throw tone,Training 1 trial 14 throw 1,Add ,B14
+165,633,3,Offset 1,NA,Training 1 trial 14 throw 2,Add ,B14
+166,633.5,0.5,Offset 1,Throw tone,Training 1 trial 14 throw 2,Add ,B14
+167,636.5,3,Offset 1,NA,Training 1 trial 14 throw 3,Add ,B14
+168,637,0.5,Offset 1,Throw tone,Training 1 trial 14 throw 3,Add ,B14
+169,652,15,Collect darts,Collect darts,Collecting darts for Training trial 14,Save ,B14
+170,655,3,Offset 1,NA,Training 1 trial 15 throw 1,Add ,B15
+171,655.5,0.5,Offset 1,Throw tone,Training 1 trial 15 throw 1,Add ,B15
+172,658.5,3,Offset 1,NA,Training 1 trial 15 throw 2,Add ,B15
+173,659,0.5,Offset 1,Throw tone,Training 1 trial 15 throw 2,Add ,B15
+174,662,3,Offset 1,NA,Training 1 trial 15 throw 3,Add ,B15
+175,662.5,0.5,Offset 1,Throw tone,Training 1 trial 15 throw 3,Add ,B15
+176,677.5,15,Collect darts,Collect darts,Collecting darts for Training trial 15,Save ,B15
+177,680.5,3,Offset 1,NA,Training 1 trial 16 throw 1,Add ,B16
+178,681,0.5,Offset 1,Throw tone,Training 1 trial 16 throw 1,Add ,B16
+179,684,3,Offset 1,NA,Training 1 trial 16 throw 2,Add ,B16
+180,684.5,0.5,Offset 1,Throw tone,Training 1 trial 16 throw 2,Add ,B16
+181,687.5,3,Offset 1,NA,Training 1 trial 16 throw 3,Add ,B16
+182,688,0.5,Offset 1,Throw tone,Training 1 trial 16 throw 3,Add ,B16
+183,703,15,Collect darts,Collect darts,Collecting darts for Training trial 16,Save ,B16
+184,706,3,Offset 1,NA,Training 1 trial 17 throw 1,Add ,B17
+185,706.5,0.5,Offset 1,Throw tone,Training 1 trial 17 throw 1,Add ,B17
+186,709.5,3,Offset 1,NA,Training 1 trial 17 throw 2,Add ,B17
+187,710,0.5,Offset 1,Throw tone,Training 1 trial 17 throw 2,Add ,B17
+188,713,3,Offset 1,NA,Training 1 trial 17 throw 3,Add ,B17
+189,713.5,0.5,Offset 1,Throw tone,Training 1 trial 17 throw 3,Add ,B17
+190,728.5,15,Collect darts,Collect darts,Collecting darts for Training trial 17,Save ,B17
+191,731.5,3,Offset 1,NA,Training 1 trial 18 throw 1,Add ,B18
+192,732,0.5,Offset 1,Throw tone,Training 1 trial 18 throw 1,Add ,B18
+193,735,3,Offset 1,NA,Training 1 trial 18 throw 2,Add ,B18
+194,735.5,0.5,Offset 1,Throw tone,Training 1 trial 18 throw 2,Add ,B18
+195,738.5,3,Offset 1,NA,Training 1 trial 18 throw 3,Add ,B18
+196,739,0.5,Offset 1,Throw tone,Training 1 trial 18 throw 3,Add ,B18
+197,754,15,Collect darts,Collect darts,Collecting darts for Training trial 18,Save ,B18
+198,757,3,Offset 1,NA,Training 1 trial 19 throw 1,Add ,B19
+199,757.5,0.5,Offset 1,Throw tone,Training 1 trial 19 throw 1,Add ,B19
+200,760.5,3,Offset 1,NA,Training 1 trial 19 throw 2,Add ,B19
+201,761,0.5,Offset 1,Throw tone,Training 1 trial 19 throw 2,Add ,B19
+202,764,3,Offset 1,NA,Training 1 trial 19 throw 3,Add ,B19
+203,764.5,0.5,Offset 1,Throw tone,Training 1 trial 19 throw 3,Add ,B19
+204,779.5,15,Collect darts,Collect darts,Collecting darts for Training trial 19,Save ,B19
+205,782.5,3,Offset 1,NA,Training 1 trial 20 throw 1,Add ,B20
+206,783,0.5,Offset 1,Throw tone,Training 1 trial 20 throw 1,Add ,B20
+207,786,3,Offset 1,NA,Training 1 trial 20 throw 2,Add ,B20
+208,786.5,0.5,Offset 1,Throw tone,Training 1 trial 20 throw 2,Add ,B20
+209,789.5,3,Offset 1,NA,Training 1 trial 20 throw 3,Add ,B20
+210,790,0.5,Offset 1,Throw tone,Training 1 trial 20 throw 3,Add ,B20
+211,805,15,Collect darts,Collect darts,Collecting darts for Training trial 20,Save ,B20
+212,825,20,Blank,Instructions 3,Instructions for Training 2,None,None
+213,828,3,Offset 2,NA,Training 2 trial 1 throw 1,Add ,C1
+214,828.5,0.5,Offset 2,Throw tone,Training 2 trial 1 throw 1,Add ,C1
+215,831.5,3,Offset 2,NA,Training 2 trial 1 throw 2,Add ,C1
+216,832,0.5,Offset 2,Throw tone,Training 2 trial 1 throw 2,Add ,C1
+217,835,3,Offset 2,NA,Training 2 trial 1 throw 3,Add ,C1
+218,835.5,0.5,Offset 2,Throw tone,Training 2 trial 1 throw 3,Add ,C1
+219,850.5,15,Collect darts,Collect darts,Collecting darts for Training trial 1,Save ,C1
+220,853.5,3,Offset 2,NA,Training 2 trial 2 throw 1,Add ,C2
+221,854,0.5,Offset 2,Throw tone,Training 2 trial 2 throw 1,Add ,C2
+222,857,3,Offset 2,NA,Training 2 trial 2 throw 2,Add ,C2
+223,857.5,0.5,Offset 2,Throw tone,Training 2 trial 2 throw 2,Add ,C2
+224,860.5,3,Offset 2,NA,Training 2 trial 2 throw 3,Add ,C2
+225,861,0.5,Offset 2,Throw tone,Training 2 trial 2 throw 3,Add ,C2
+226,876,15,Collect darts,Collect darts,Collecting darts for Training trial 2,Save ,C2
+227,879,3,Offset 2,NA,Training 2 trial 3 throw 1,Add ,C3
+228,879.5,0.5,Offset 2,Throw tone,Training 2 trial 3 throw 1,Add ,C3
+229,882.5,3,Offset 2,NA,Training 2 trial 3 throw 2,Add ,C3
+230,883,0.5,Offset 2,Throw tone,Training 2 trial 3 throw 2,Add ,C3
+231,886,3,Offset 2,NA,Training 2 trial 3 throw 3,Add ,C3
+232,886.5,0.5,Offset 2,Throw tone,Training 2 trial 3 throw 3,Add ,C3
+233,901.5,15,Collect darts,Collect darts,Collecting darts for Training trial 3,Save ,C3
+234,904.5,3,Offset 2,NA,Training 2 trial 4 throw 1,Add ,C4
+235,905,0.5,Offset 2,Throw tone,Training 2 trial 4 throw 1,Add ,C4
+236,908,3,Offset 2,NA,Training 2 trial 4 throw 2,Add ,C4
+237,908.5,0.5,Offset 2,Throw tone,Training 2 trial 4 throw 2,Add ,C4
+238,911.5,3,Offset 2,NA,Training 2 trial 4 throw 3,Add ,C4
+239,912,0.5,Offset 2,Throw tone,Training 2 trial 4 throw 3,Add ,C4
+240,927,15,Collect darts,Collect darts,Collecting darts for Training trial 4,Save ,C4
+241,930,3,Offset 2,NA,Training 2 trial 5 throw 1,Add ,C5
+242,930.5,0.5,Offset 2,Throw tone,Training 2 trial 5 throw 1,Add ,C5
+243,933.5,3,Offset 2,NA,Training 2 trial 5 throw 2,Add ,C5
+244,934,0.5,Offset 2,Throw tone,Training 2 trial 5 throw 2,Add ,C5
+245,937,3,Offset 2,NA,Training 2 trial 5 throw 3,Add ,C5
+246,937.5,0.5,Offset 2,Throw tone,Training 2 trial 5 throw 3,Add ,C5
+247,952.5,15,Collect darts,Collect darts,Collecting darts for Training trial 5,Save ,C5
+248,955.5,3,Offset 2,NA,Training 2 trial 6 throw 1,Add ,C6
+249,956,0.5,Offset 2,Throw tone,Training 2 trial 6 throw 1,Add ,C6
+250,959,3,Offset 2,NA,Training 2 trial 6 throw 2,Add ,C6
+251,959.5,0.5,Offset 2,Throw tone,Training 2 trial 6 throw 2,Add ,C6
+252,962.5,3,Offset 2,NA,Training 2 trial 6 throw 3,Add ,C6
+253,963,0.5,Offset 2,Throw tone,Training 2 trial 6 throw 3,Add ,C6
+254,978,15,Collect darts,Collect darts,Collecting darts for Training trial 6,Save ,C6
+255,981,3,Offset 2,NA,Training 2 trial 7 throw 1,Add ,C7
+256,981.5,0.5,Offset 2,Throw tone,Training 2 trial 7 throw 1,Add ,C7
+257,984.5,3,Offset 2,NA,Training 2 trial 7 throw 2,Add ,C7
+258,985,0.5,Offset 2,Throw tone,Training 2 trial 7 throw 2,Add ,C7
+259,988,3,Offset 2,NA,Training 2 trial 7 throw 3,Add ,C7
+260,988.5,0.5,Offset 2,Throw tone,Training 2 trial 7 throw 3,Add ,C7
+261,1003.5,15,Collect darts,Collect darts,Collecting darts for Training trial 7,Save ,C7
+262,1006.5,3,Offset 2,NA,Training 2 trial 8 throw 1,Add ,C8
+263,1007,0.5,Offset 2,Throw tone,Training 2 trial 8 throw 1,Add ,C8
+264,1010,3,Offset 2,NA,Training 2 trial 8 throw 2,Add ,C8
+265,1010.5,0.5,Offset 2,Throw tone,Training 2 trial 8 throw 2,Add ,C8
+266,1013.5,3,Offset 2,NA,Training 2 trial 8 throw 3,Add ,C8
+267,1014,0.5,Offset 2,Throw tone,Training 2 trial 8 throw 3,Add ,C8
+268,1029,15,Collect darts,Collect darts,Collecting darts for Training trial 8,Save ,C8
+269,1032,3,Offset 2,NA,Training 2 trial 9 throw 1,Add ,C9
+270,1032.5,0.5,Offset 2,Throw tone,Training 2 trial 9 throw 1,Add ,C9
+271,1035.5,3,Offset 2,NA,Training 2 trial 9 throw 2,Add ,C9
+272,1036,0.5,Offset 2,Throw tone,Training 2 trial 9 throw 2,Add ,C9
+273,1039,3,Offset 2,NA,Training 2 trial 9 throw 3,Add ,C9
+274,1039.5,0.5,Offset 2,Throw tone,Training 2 trial 9 throw 3,Add ,C9
+275,1054.5,15,Collect darts,Collect darts,Collecting darts for Training trial 9,Save ,C9
+276,1057.5,3,Offset 2,NA,Training 2 trial 10 throw 1,Add ,C10
+277,1058,0.5,Offset 2,Throw tone,Training 2 trial 10 throw 1,Add ,C10
+278,1061,3,Offset 2,NA,Training 2 trial 10 throw 2,Add ,C10
+279,1061.5,0.5,Offset 2,Throw tone,Training 2 trial 10 throw 2,Add ,C10
+280,1064.5,3,Offset 2,NA,Training 2 trial 10 throw 3,Add ,C10
+281,1065,0.5,Offset 2,Throw tone,Training 2 trial 10 throw 3,Add ,C10
+282,1080,15,Collect darts,Collect darts,Collecting darts for Training trial 10,Save ,C10
+283,1083,3,Offset 2,NA,Training 2 trial 11 throw 1,Add ,C11
+284,1083.5,0.5,Offset 2,Throw tone,Training 2 trial 11 throw 1,Add ,C11
+285,1086.5,3,Offset 2,NA,Training 2 trial 11 throw 2,Add ,C11
+286,1087,0.5,Offset 2,Throw tone,Training 2 trial 11 throw 2,Add ,C11
+287,1090,3,Offset 2,NA,Training 2 trial 11 throw 3,Add ,C11
+288,1090.5,0.5,Offset 2,Throw tone,Training 2 trial 11 throw 3,Add ,C11
+289,1105.5,15,Collect darts,Collect darts,Collecting darts for Training trial 11,Save ,C11
+290,1108.5,3,Offset 2,NA,Training 2 trial 12 throw 1,Add ,C12
+291,1109,0.5,Offset 2,Throw tone,Training 2 trial 12 throw 1,Add ,C12
+292,1112,3,Offset 2,NA,Training 2 trial 12 throw 2,Add ,C12
+293,1112.5,0.5,Offset 2,Throw tone,Training 2 trial 12 throw 2,Add ,C12
+294,1115.5,3,Offset 2,NA,Training 2 trial 12 throw 3,Add ,C12
+295,1116,0.5,Offset 2,Throw tone,Training 2 trial 12 throw 3,Add ,C12
+296,1131,15,Collect darts,Collect darts,Collecting darts for Training trial 12,Save ,C12
+297,1134,3,Offset 2,NA,Training 2 trial 13 throw 1,Add ,C13
+298,1134.5,0.5,Offset 2,Throw tone,Training 2 trial 13 throw 1,Add ,C13
+299,1137.5,3,Offset 2,NA,Training 2 trial 13 throw 2,Add ,C13
+300,1138,0.5,Offset 2,Throw tone,Training 2 trial 13 throw 2,Add ,C13
+301,1141,3,Offset 2,NA,Training 2 trial 13 throw 3,Add ,C13
+302,1141.5,0.5,Offset 2,Throw tone,Training 2 trial 13 throw 3,Add ,C13
+303,1156.5,15,Collect darts,Collect darts,Collecting darts for Training trial 13,Save ,C13
+304,1159.5,3,Offset 2,NA,Training 2 trial 14 throw 1,Add ,C14
+305,1160,0.5,Offset 2,Throw tone,Training 2 trial 14 throw 1,Add ,C14
+306,1163,3,Offset 2,NA,Training 2 trial 14 throw 2,Add ,C14
+307,1163.5,0.5,Offset 2,Throw tone,Training 2 trial 14 throw 2,Add ,C14
+308,1166.5,3,Offset 2,NA,Training 2 trial 14 throw 3,Add ,C14
+309,1167,0.5,Offset 2,Throw tone,Training 2 trial 14 throw 3,Add ,C14
+310,1182,15,Collect darts,Collect darts,Collecting darts for Training trial 14,Save ,C14
+311,1185,3,Offset 2,NA,Training 2 trial 15 throw 1,Add ,C15
+312,1185.5,0.5,Offset 2,Throw tone,Training 2 trial 15 throw 1,Add ,C15
+313,1188.5,3,Offset 2,NA,Training 2 trial 15 throw 2,Add ,C15
+314,1189,0.5,Offset 2,Throw tone,Training 2 trial 15 throw 2,Add ,C15
+315,1192,3,Offset 2,NA,Training 2 trial 15 throw 3,Add ,C15
+316,1192.5,0.5,Offset 2,Throw tone,Training 2 trial 15 throw 3,Add ,C15
+317,1207.5,15,Collect darts,Collect darts,Collecting darts for Training trial 15,Save ,C15
+318,1210.5,3,Offset 2,NA,Training 2 trial 16 throw 1,Add ,C16
+319,1211,0.5,Offset 2,Throw tone,Training 2 trial 16 throw 1,Add ,C16
+320,1214,3,Offset 2,NA,Training 2 trial 16 throw 2,Add ,C16
+321,1214.5,0.5,Offset 2,Throw tone,Training 2 trial 16 throw 2,Add ,C16
+322,1217.5,3,Offset 2,NA,Training 2 trial 16 throw 3,Add ,C16
+323,1218,0.5,Offset 2,Throw tone,Training 2 trial 16 throw 3,Add ,C16
+324,1233,15,Collect darts,Collect darts,Collecting darts for Training trial 16,Save ,C16
+325,1236,3,Offset 2,NA,Training 2 trial 17 throw 1,Add ,C17
+326,1236.5,0.5,Offset 2,Throw tone,Training 2 trial 17 throw 1,Add ,C17
+327,1239.5,3,Offset 2,NA,Training 2 trial 17 throw 2,Add ,C17
+328,1240,0.5,Offset 2,Throw tone,Training 2 trial 17 throw 2,Add ,C17
+329,1243,3,Offset 2,NA,Training 2 trial 17 throw 3,Add ,C17
+330,1243.5,0.5,Offset 2,Throw tone,Training 2 trial 17 throw 3,Add ,C17
+331,1258.5,15,Collect darts,Collect darts,Collecting darts for Training trial 17,Save ,C17
+332,1261.5,3,Offset 2,NA,Training 2 trial 18 throw 1,Add ,C18
+333,1262,0.5,Offset 2,Throw tone,Training 2 trial 18 throw 1,Add ,C18
+334,1265,3,Offset 2,NA,Training 2 trial 18 throw 2,Add ,C18
+335,1265.5,0.5,Offset 2,Throw tone,Training 2 trial 18 throw 2,Add ,C18
+336,1268.5,3,Offset 2,NA,Training 2 trial 18 throw 3,Add ,C18
+337,1269,0.5,Offset 2,Throw tone,Training 2 trial 18 throw 3,Add ,C18
+338,1284,15,Collect darts,Collect darts,Collecting darts for Training trial 18,Save ,C18
+339,1287,3,Offset 2,NA,Training 2 trial 19 throw 1,Add ,C19
+340,1287.5,0.5,Offset 2,Throw tone,Training 2 trial 19 throw 1,Add ,C19
+341,1290.5,3,Offset 2,NA,Training 2 trial 19 throw 2,Add ,C19
+342,1291,0.5,Offset 2,Throw tone,Training 2 trial 19 throw 2,Add ,C19
+343,1294,3,Offset 2,NA,Training 2 trial 19 throw 3,Add ,C19
+344,1294.5,0.5,Offset 2,Throw tone,Training 2 trial 19 throw 3,Add ,C19
+345,1309.5,15,Collect darts,Collect darts,Collecting darts for Training trial 19,Save ,C19
+346,1312.5,3,Offset 2,NA,Training 2 trial 20 throw 1,Add ,C20
+347,1313,0.5,Offset 2,Throw tone,Training 2 trial 20 throw 1,Add ,C20
+348,1316,3,Offset 2,NA,Training 2 trial 20 throw 2,Add ,C20
+349,1316.5,0.5,Offset 2,Throw tone,Training 2 trial 20 throw 2,Add ,C20
+350,1319.5,3,Offset 2,NA,Training 2 trial 20 throw 3,Add ,C20
+351,1320,0.5,Offset 2,Throw tone,Training 2 trial 20 throw 3,Add ,C20
+352,1335,15,Collect darts,Collect darts,Collecting darts for Training trial 20,Save ,C20
+353,1355,20,Blank,Instructions 4,Instructions for Training 3,None,None
+354,1358,3,Offset 3,NA,Training 3 trial 1 throw 1,Add ,D1
+355,1358.5,0.5,Offset 3,Throw tone,Training 3 trial 1 throw 1,Add ,D1
+356,1361.5,3,Offset 3,NA,Training 3 trial 1 throw 2,Add ,D1
+357,1362,0.5,Offset 3,Throw tone,Training 3 trial 1 throw 2,Add ,D1
+358,1365,3,Offset 3,NA,Training 3 trial 1 throw 3,Add ,D1
+359,1365.5,0.5,Offset 3,Throw tone,Training 3 trial 1 throw 3,Add ,D1
+360,1380.5,15,Collect darts,Collect darts,Collecting darts for Training trial 1,Save ,D1
+361,1383.5,3,Offset 3,NA,Training 3 trial 2 throw 1,Add ,D2
+362,1384,0.5,Offset 3,Throw tone,Training 3 trial 2 throw 1,Add ,D2
+363,1387,3,Offset 3,NA,Training 3 trial 2 throw 2,Add ,D2
+364,1387.5,0.5,Offset 3,Throw tone,Training 3 trial 2 throw 2,Add ,D2
+365,1390.5,3,Offset 3,NA,Training 3 trial 2 throw 3,Add ,D2
+366,1391,0.5,Offset 3,Throw tone,Training 3 trial 2 throw 3,Add ,D2
+367,1406,15,Collect darts,Collect darts,Collecting darts for Training trial 2,Save ,D2
+368,1409,3,Offset 3,NA,Training 3 trial 3 throw 1,Add ,D3
+369,1409.5,0.5,Offset 3,Throw tone,Training 3 trial 3 throw 1,Add ,D3
+370,1412.5,3,Offset 3,NA,Training 3 trial 3 throw 2,Add ,D3
+371,1413,0.5,Offset 3,Throw tone,Training 3 trial 3 throw 2,Add ,D3
+372,1416,3,Offset 3,NA,Training 3 trial 3 throw 3,Add ,D3
+373,1416.5,0.5,Offset 3,Throw tone,Training 3 trial 3 throw 3,Add ,D3
+374,1431.5,15,Collect darts,Collect darts,Collecting darts for Training trial 3,Save ,D3
+375,1434.5,3,Offset 3,NA,Training 3 trial 4 throw 1,Add ,D4
+376,1435,0.5,Offset 3,Throw tone,Training 3 trial 4 throw 1,Add ,D4
+377,1438,3,Offset 3,NA,Training 3 trial 4 throw 2,Add ,D4
+378,1438.5,0.5,Offset 3,Throw tone,Training 3 trial 4 throw 2,Add ,D4
+379,1441.5,3,Offset 3,NA,Training 3 trial 4 throw 3,Add ,D4
+380,1442,0.5,Offset 3,Throw tone,Training 3 trial 4 throw 3,Add ,D4
+381,1457,15,Collect darts,Collect darts,Collecting darts for Training trial 4,Save ,D4
+382,1460,3,Offset 3,NA,Training 3 trial 5 throw 1,Add ,D5
+383,1460.5,0.5,Offset 3,Throw tone,Training 3 trial 5 throw 1,Add ,D5
+384,1463.5,3,Offset 3,NA,Training 3 trial 5 throw 2,Add ,D5
+385,1464,0.5,Offset 3,Throw tone,Training 3 trial 5 throw 2,Add ,D5
+386,1467,3,Offset 3,NA,Training 3 trial 5 throw 3,Add ,D5
+387,1467.5,0.5,Offset 3,Throw tone,Training 3 trial 5 throw 3,Add ,D5
+388,1482.5,15,Collect darts,Collect darts,Collecting darts for Training trial 5,Save ,D5
+389,1485.5,3,Offset 3,NA,Training 3 trial 6 throw 1,Add ,D6
+390,1486,0.5,Offset 3,Throw tone,Training 3 trial 6 throw 1,Add ,D6
+391,1489,3,Offset 3,NA,Training 3 trial 6 throw 2,Add ,D6
+392,1489.5,0.5,Offset 3,Throw tone,Training 3 trial 6 throw 2,Add ,D6
+393,1492.5,3,Offset 3,NA,Training 3 trial 6 throw 3,Add ,D6
+394,1493,0.5,Offset 3,Throw tone,Training 3 trial 6 throw 3,Add ,D6
+395,1508,15,Collect darts,Collect darts,Collecting darts for Training trial 6,Save ,D6
+396,1511,3,Offset 3,NA,Training 3 trial 7 throw 1,Add ,D7
+397,1511.5,0.5,Offset 3,Throw tone,Training 3 trial 7 throw 1,Add ,D7
+398,1514.5,3,Offset 3,NA,Training 3 trial 7 throw 2,Add ,D7
+399,1515,0.5,Offset 3,Throw tone,Training 3 trial 7 throw 2,Add ,D7
+400,1518,3,Offset 3,NA,Training 3 trial 7 throw 3,Add ,D7
+401,1518.5,0.5,Offset 3,Throw tone,Training 3 trial 7 throw 3,Add ,D7
+402,1533.5,15,Collect darts,Collect darts,Collecting darts for Training trial 7,Save ,D7
+403,1536.5,3,Offset 3,NA,Training 3 trial 8 throw 1,Add ,D8
+404,1537,0.5,Offset 3,Throw tone,Training 3 trial 8 throw 1,Add ,D8
+405,1540,3,Offset 3,NA,Training 3 trial 8 throw 2,Add ,D8
+406,1540.5,0.5,Offset 3,Throw tone,Training 3 trial 8 throw 2,Add ,D8
+407,1543.5,3,Offset 3,NA,Training 3 trial 8 throw 3,Add ,D8
+408,1544,0.5,Offset 3,Throw tone,Training 3 trial 8 throw 3,Add ,D8
+409,1559,15,Collect darts,Collect darts,Collecting darts for Training trial 8,Save ,D8
+410,1562,3,Offset 3,NA,Training 3 trial 9 throw 1,Add ,D9
+411,1562.5,0.5,Offset 3,Throw tone,Training 3 trial 9 throw 1,Add ,D9
+412,1565.5,3,Offset 3,NA,Training 3 trial 9 throw 2,Add ,D9
+413,1566,0.5,Offset 3,Throw tone,Training 3 trial 9 throw 2,Add ,D9
+414,1569,3,Offset 3,NA,Training 3 trial 9 throw 3,Add ,D9
+415,1569.5,0.5,Offset 3,Throw tone,Training 3 trial 9 throw 3,Add ,D9
+416,1584.5,15,Collect darts,Collect darts,Collecting darts for Training trial 9,Save ,D9
+417,1587.5,3,Offset 3,NA,Training 3 trial 10 throw 1,Add ,D10
+418,1588,0.5,Offset 3,Throw tone,Training 3 trial 10 throw 1,Add ,D10
+419,1591,3,Offset 3,NA,Training 3 trial 10 throw 2,Add ,D10
+420,1591.5,0.5,Offset 3,Throw tone,Training 3 trial 10 throw 2,Add ,D10
+421,1594.5,3,Offset 3,NA,Training 3 trial 10 throw 3,Add ,D10
+422,1595,0.5,Offset 3,Throw tone,Training 3 trial 10 throw 3,Add ,D10
+423,1610,15,Collect darts,Collect darts,Collecting darts for Training trial 10,Save ,D10
+424,1613,3,Offset 3,NA,Training 3 trial 11 throw 1,Add ,D11
+425,1613.5,0.5,Offset 3,Throw tone,Training 3 trial 11 throw 1,Add ,D11
+426,1616.5,3,Offset 3,NA,Training 3 trial 11 throw 2,Add ,D11
+427,1617,0.5,Offset 3,Throw tone,Training 3 trial 11 throw 2,Add ,D11
+428,1620,3,Offset 3,NA,Training 3 trial 11 throw 3,Add ,D11
+429,1620.5,0.5,Offset 3,Throw tone,Training 3 trial 11 throw 3,Add ,D11
+430,1635.5,15,Collect darts,Collect darts,Collecting darts for Training trial 11,Save ,D11
+431,1638.5,3,Offset 3,NA,Training 3 trial 12 throw 1,Add ,D12
+432,1639,0.5,Offset 3,Throw tone,Training 3 trial 12 throw 1,Add ,D12
+433,1642,3,Offset 3,NA,Training 3 trial 12 throw 2,Add ,D12
+434,1642.5,0.5,Offset 3,Throw tone,Training 3 trial 12 throw 2,Add ,D12
+435,1645.5,3,Offset 3,NA,Training 3 trial 12 throw 3,Add ,D12
+436,1646,0.5,Offset 3,Throw tone,Training 3 trial 12 throw 3,Add ,D12
+437,1661,15,Collect darts,Collect darts,Collecting darts for Training trial 12,Save ,D12
+438,1664,3,Offset 3,NA,Training 3 trial 13 throw 1,Add ,D13
+439,1664.5,0.5,Offset 3,Throw tone,Training 3 trial 13 throw 1,Add ,D13
+440,1667.5,3,Offset 3,NA,Training 3 trial 13 throw 2,Add ,D13
+441,1668,0.5,Offset 3,Throw tone,Training 3 trial 13 throw 2,Add ,D13
+442,1671,3,Offset 3,NA,Training 3 trial 13 throw 3,Add ,D13
+443,1671.5,0.5,Offset 3,Throw tone,Training 3 trial 13 throw 3,Add ,D13
+444,1686.5,15,Collect darts,Collect darts,Collecting darts for Training trial 13,Save ,D13
+445,1689.5,3,Offset 3,NA,Training 3 trial 14 throw 1,Add ,D14
+446,1690,0.5,Offset 3,Throw tone,Training 3 trial 14 throw 1,Add ,D14
+447,1693,3,Offset 3,NA,Training 3 trial 14 throw 2,Add ,D14
+448,1693.5,0.5,Offset 3,Throw tone,Training 3 trial 14 throw 2,Add ,D14
+449,1696.5,3,Offset 3,NA,Training 3 trial 14 throw 3,Add ,D14
+450,1697,0.5,Offset 3,Throw tone,Training 3 trial 14 throw 3,Add ,D14
+451,1712,15,Collect darts,Collect darts,Collecting darts for Training trial 14,Save ,D14
+452,1715,3,Offset 3,NA,Training 3 trial 15 throw 1,Add ,D15
+453,1715.5,0.5,Offset 3,Throw tone,Training 3 trial 15 throw 1,Add ,D15
+454,1718.5,3,Offset 3,NA,Training 3 trial 15 throw 2,Add ,D15
+455,1719,0.5,Offset 3,Throw tone,Training 3 trial 15 throw 2,Add ,D15
+456,1722,3,Offset 3,NA,Training 3 trial 15 throw 3,Add ,D15
+457,1722.5,0.5,Offset 3,Throw tone,Training 3 trial 15 throw 3,Add ,D15
+458,1737.5,15,Collect darts,Collect darts,Collecting darts for Training trial 15,Save ,D15
+459,1740.5,3,Offset 3,NA,Training 3 trial 16 throw 1,Add ,D16
+460,1741,0.5,Offset 3,Throw tone,Training 3 trial 16 throw 1,Add ,D16
+461,1744,3,Offset 3,NA,Training 3 trial 16 throw 2,Add ,D16
+462,1744.5,0.5,Offset 3,Throw tone,Training 3 trial 16 throw 2,Add ,D16
+463,1747.5,3,Offset 3,NA,Training 3 trial 16 throw 3,Add ,D16
+464,1748,0.5,Offset 3,Throw tone,Training 3 trial 16 throw 3,Add ,D16
+465,1763,15,Collect darts,Collect darts,Collecting darts for Training trial 16,Save ,D16
+466,1766,3,Offset 3,NA,Training 3 trial 17 throw 1,Add ,D17
+467,1766.5,0.5,Offset 3,Throw tone,Training 3 trial 17 throw 1,Add ,D17
+468,1769.5,3,Offset 3,NA,Training 3 trial 17 throw 2,Add ,D17
+469,1770,0.5,Offset 3,Throw tone,Training 3 trial 17 throw 2,Add ,D17
+470,1773,3,Offset 3,NA,Training 3 trial 17 throw 3,Add ,D17
+471,1773.5,0.5,Offset 3,Throw tone,Training 3 trial 17 throw 3,Add ,D17
+472,1788.5,15,Collect darts,Collect darts,Collecting darts for Training trial 17,Save ,D17
+473,1791.5,3,Offset 3,NA,Training 3 trial 18 throw 1,Add ,D18
+474,1792,0.5,Offset 3,Throw tone,Training 3 trial 18 throw 1,Add ,D18
+475,1795,3,Offset 3,NA,Training 3 trial 18 throw 2,Add ,D18
+476,1795.5,0.5,Offset 3,Throw tone,Training 3 trial 18 throw 2,Add ,D18
+477,1798.5,3,Offset 3,NA,Training 3 trial 18 throw 3,Add ,D18
+478,1799,0.5,Offset 3,Throw tone,Training 3 trial 18 throw 3,Add ,D18
+479,1814,15,Collect darts,Collect darts,Collecting darts for Training trial 18,Save ,D18
+480,1817,3,Offset 3,NA,Training 3 trial 19 throw 1,Add ,D19
+481,1817.5,0.5,Offset 3,Throw tone,Training 3 trial 19 throw 1,Add ,D19
+482,1820.5,3,Offset 3,NA,Training 3 trial 19 throw 2,Add ,D19
+483,1821,0.5,Offset 3,Throw tone,Training 3 trial 19 throw 2,Add ,D19
+484,1824,3,Offset 3,NA,Training 3 trial 19 throw 3,Add ,D19
+485,1824.5,0.5,Offset 3,Throw tone,Training 3 trial 19 throw 3,Add ,D19
+486,1839.5,15,Collect darts,Collect darts,Collecting darts for Training trial 19,Save ,D19
+487,1842.5,3,Offset 3,NA,Training 3 trial 20 throw 1,Add ,D20
+488,1843,0.5,Offset 3,Throw tone,Training 3 trial 20 throw 1,Add ,D20
+489,1846,3,Offset 3,NA,Training 3 trial 20 throw 2,Add ,D20
+490,1846.5,0.5,Offset 3,Throw tone,Training 3 trial 20 throw 2,Add ,D20
+491,1849.5,3,Offset 3,NA,Training 3 trial 20 throw 3,Add ,D20
+492,1850,0.5,Offset 3,Throw tone,Training 3 trial 20 throw 3,Add ,D20
+493,1865,15,Collect darts,Collect darts,Collecting darts for Training trial 20,Save ,D20
+494,1885,20,Blank,Instructions 5,Instructions for Evaluation Trials,None,None
+495,1888,3,Bullseye 1,NA,Evaluation trial 1 throw 1,Add ,E1
+496,1888.5,0.5,Bullseye 1,Throw tone,Evaluation trial 1 throw 1,Add ,E1
+497,1891.5,3,Bullseye 1,NA,Evaluation trial 1 throw 2,Add ,E1
+498,1892,0.5,Bullseye 1,Throw tone,Evaluation trial 1 throw 2,Add ,E1
+499,1895,3,Bullseye 1,NA,Evaluation trial 1 throw 3,Add ,E1
+500,1895.5,0.5,Bullseye 1,Throw tone,Evaluation trial 1 throw 3,Add ,E1
+501,1910.5,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 1,Save ,E1
+502,1913.5,3,Bullseye 1,NA,Evaluation trial 2 throw 1,Add ,E2
+503,1914,0.5,Bullseye 1,Throw tone,Evaluation trial 2 throw 1,Add ,E2
+504,1917,3,Bullseye 1,NA,Evaluation trial 2 throw 2,Add ,E2
+505,1917.5,0.5,Bullseye 1,Throw tone,Evaluation trial 2 throw 2,Add ,E2
+506,1920.5,3,Bullseye 1,NA,Evaluation trial 2 throw 3,Add ,E2
+507,1921,0.5,Bullseye 1,Throw tone,Evaluation trial 2 throw 3,Add ,E2
+508,1936,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 2,Save ,E2
+509,1939,3,Bullseye 1,NA,Evaluation trial 3 throw 1,Add ,E3
+510,1939.5,0.5,Bullseye 1,Throw tone,Evaluation trial 3 throw 1,Add ,E3
+511,1942.5,3,Bullseye 1,NA,Evaluation trial 3 throw 2,Add ,E3
+512,1943,0.5,Bullseye 1,Throw tone,Evaluation trial 3 throw 2,Add ,E3
+513,1946,3,Bullseye 1,NA,Evaluation trial 3 throw 3,Add ,E3
+514,1946.5,0.5,Bullseye 1,Throw tone,Evaluation trial 3 throw 3,Add ,E3
+515,1961.5,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 3,Save ,E3
+516,1964.5,3,Bullseye 1,NA,Evaluation trial 4 throw 1,Add ,E4
+517,1965,0.5,Bullseye 1,Throw tone,Evaluation trial 4 throw 1,Add ,E4
+518,1968,3,Bullseye 1,NA,Evaluation trial 4 throw 2,Add ,E4
+519,1968.5,0.5,Bullseye 1,Throw tone,Evaluation trial 4 throw 2,Add ,E4
+520,1971.5,3,Bullseye 1,NA,Evaluation trial 4 throw 3,Add ,E4
+521,1972,0.5,Bullseye 1,Throw tone,Evaluation trial 4 throw 3,Add ,E4
+522,1987,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 4,Save ,E4
+523,1990,3,Bullseye 1,NA,Evaluation trial 5 throw 1,Add ,E5
+524,1990.5,0.5,Bullseye 1,Throw tone,Evaluation trial 5 throw 1,Add ,E5
+525,1993.5,3,Bullseye 1,NA,Evaluation trial 5 throw 2,Add ,E5
+526,1994,0.5,Bullseye 1,Throw tone,Evaluation trial 5 throw 2,Add ,E5
+527,1997,3,Bullseye 1,NA,Evaluation trial 5 throw 3,Add ,E5
+528,1997.5,0.5,Bullseye 1,Throw tone,Evaluation trial 5 throw 3,Add ,E5
+529,2012.5,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 5,Save ,E5
+530,2015.5,3,Bullseye 1,NA,Evaluation trial 6 throw 1,Add ,E6
+531,2016,0.5,Bullseye 1,Throw tone,Evaluation trial 6 throw 1,Add ,E6
+532,2019,3,Bullseye 1,NA,Evaluation trial 6 throw 2,Add ,E6
+533,2019.5,0.5,Bullseye 1,Throw tone,Evaluation trial 6 throw 2,Add ,E6
+534,2022.5,3,Bullseye 1,NA,Evaluation trial 6 throw 3,Add ,E6
+535,2023,0.5,Bullseye 1,Throw tone,Evaluation trial 6 throw 3,Add ,E6
+536,2038,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 6,Save ,E6
+537,2041,3,Bullseye 1,NA,Evaluation trial 7 throw 1,Add ,E7
+538,2041.5,0.5,Bullseye 1,Throw tone,Evaluation trial 7 throw 1,Add ,E7
+539,2044.5,3,Bullseye 1,NA,Evaluation trial 7 throw 2,Add ,E7
+540,2045,0.5,Bullseye 1,Throw tone,Evaluation trial 7 throw 2,Add ,E7
+541,2048,3,Bullseye 1,NA,Evaluation trial 7 throw 3,Add ,E7
+542,2048.5,0.5,Bullseye 1,Throw tone,Evaluation trial 7 throw 3,Add ,E7
+543,2063.5,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 7,Save ,E7
+544,2066.5,3,Bullseye 1,NA,Evaluation trial 8 throw 1,Add ,E8
+545,2067,0.5,Bullseye 1,Throw tone,Evaluation trial 8 throw 1,Add ,E8
+546,2070,3,Bullseye 1,NA,Evaluation trial 8 throw 2,Add ,E8
+547,2070.5,0.5,Bullseye 1,Throw tone,Evaluation trial 8 throw 2,Add ,E8
+548,2073.5,3,Bullseye 1,NA,Evaluation trial 8 throw 3,Add ,E8
+549,2074,0.5,Bullseye 1,Throw tone,Evaluation trial 8 throw 3,Add ,E8
+550,2089,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 8,Save ,E8
+551,2092,3,Bullseye 1,NA,Evaluation trial 9 throw 1,Add ,E9
+552,2092.5,0.5,Bullseye 1,Throw tone,Evaluation trial 9 throw 1,Add ,E9
+553,2095.5,3,Bullseye 1,NA,Evaluation trial 9 throw 2,Add ,E9
+554,2096,0.5,Bullseye 1,Throw tone,Evaluation trial 9 throw 2,Add ,E9
+555,2099,3,Bullseye 1,NA,Evaluation trial 9 throw 3,Add ,E9
+556,2099.5,0.5,Bullseye 1,Throw tone,Evaluation trial 9 throw 3,Add ,E9
+557,2114.5,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 9,Save ,E9
+558,2117.5,3,Bullseye 1,NA,Evaluation trial 10 throw 1,Add ,E10
+559,2118,0.5,Bullseye 1,Throw tone,Evaluation trial 10 throw 1,Add ,E10
+560,2121,3,Bullseye 1,NA,Evaluation trial 10 throw 2,Add ,E10
+561,2121.5,0.5,Bullseye 1,Throw tone,Evaluation trial 10 throw 2,Add ,E10
+562,2124.5,3,Bullseye 1,NA,Evaluation trial 10 throw 3,Add ,E10
+563,2125,0.5,Bullseye 1,Throw tone,Evaluation trial 10 throw 3,Add ,E10
+564,2140,15,Collect darts,Collect darts,Collecting darts for Evaluation trial 10,Save ,E10
+565,2150,10,Blank,Instructions 6,Experiment Finished,End,None

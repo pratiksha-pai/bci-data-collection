@@ -2,7 +2,8 @@
 import tkinter as tk
 import datetime
 import os
-from GUIs import acquisition_setup_gui
+import csv
+from GUIs import main_menu_gui
 
 # Stores all the properties of the windows in one place to make changes easier
 def get_window_properties(prop):
@@ -36,36 +37,7 @@ def create_window():
     root.geometry(f"{width}x{height}+{x}+{y}") # Sets the window's dimensions
     return root
 
-# Adds the GUI elements to the window
-def add_gui_elements(root):
-
-    # Gets the GUI element parameters parameters
-    px, py, btn_width, btn_height, window_height = get_window_properties("gui")
-
-    # Creates the frame that stores the GUI elements
-    frame = tk.Frame(root)
-    frame.pack(pady=(window_height//4))
-
-    # Creates the button to end data collection
-    def end_acquisition(root):
-        print("ending")
-    exit_btn = tk.Button(frame, text="End Acquisition", command=lambda:end_acquisition(root), width=btn_width, height=btn_height)
-    exit_btn.grid(row=4, column=0, padx=px, pady=py)
-
-    # Creates the button to pause data collection
-    def pause():
-        print("pausing")
-    pause_btn = tk.Button(frame, text="Pause", command=lambda:pause(), width=btn_width, height=btn_height)
-    pause_btn.grid(row=4, column=1, padx=px, pady=py)
-
-    # Creates the button to resume data collection
-    def resume():
-        print("resuming")
-    resume_btn = tk.Button(frame, text="Resume", command=lambda:resume(), width=btn_width, height=btn_height)
-    resume_btn.grid(row=4, column=2, padx=px, pady=py)
-    return
-
-# Creates the file for storing data
+# Creates the folder for storing data
 def create_storage(partID, protocol):
     current_date = datetime.datetime.now()
     formatted_date = current_date.strftime('%Y%m%d%H%M%S')
@@ -74,12 +46,103 @@ def create_storage(partID, protocol):
     folder_path = base_path + "/" + folderID
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
+    return folder_path
+
+# Gets the instructions for data collection
+def get_instructions():
+    protocol_path = "/Users/jackmostyn/Lab Scripts/bci-data-collection/Protocols/Main"
+    instructions_path = protocol_path + "/Instructions.csv"
+    parameters_path = protocol_path + "/Parameters.csv"
+    instructions = []
+    with open(instructions_path, 'r') as file1:
+        reader1 = csv.reader(file1)
+        for rowa in reader1:
+            instructions.append(rowa)
+    parameters = []
+    with open(parameters_path, 'r') as file2:
+        reader2 = csv.reader(file2)
+        for rowb in reader2:
+            parameters.append(rowb)
+    return instructions, parameters   
+
+def run_experiment(root, save_path, instructions, parameters):
+    # Gets the GUI element parameters parameters
+    px, py, btn_width, btn_height, window_height = get_window_properties("gui")
+
+    # Stores whether the experiment is running
+    running = tk.BooleanVar(root, False)
+    started = tk.BooleanVar(root, False)
+    last_update_time = [None]
+    time_passed = [datetime.timedelta(0)]
+
+    # Creates the frame that stores the GUI elements
+    frame = tk.Frame(root)
+    frame.pack(pady=(window_height//4))
+
+    # Creates the label that displays the time
+    timer_lbl = tk.Label(frame, text="0:00:000")
+    timer_lbl.grid(row=0, column=0, padx=px, pady=py)
+
+    def update_timer_display():
+        if running.get():
+            delta = datetime.datetime.now() - last_update_time[0]
+            time_passed[0] += delta
+            last_update_time[0] = datetime.datetime.now()
+
+        # Compute total seconds
+        total_seconds = time_passed[0].seconds + time_passed[0].microseconds / 1e6
+        minutes, remainder = divmod(total_seconds, 60)
+        seconds = int(remainder)
+        milliseconds = int((remainder - seconds) * 1000)
+
+        # Update the display
+        timer_lbl.config(text="{}:{:02}:{:03}".format(minutes, seconds, milliseconds))
+            
+        # Schedule the function to be called after 50ms for more frequent updates
+        root.after(50, update_timer_display)
+
+    # Creates the button to start data collection
+    def start_acquisition():
+        if not running.get() and not started.get():
+            running.set(True)
+            started.set(True)
+            last_update_time[0] = datetime.datetime.now()
+            update_timer_display()
+    start_btn = tk.Button(frame, text="Start", command=lambda:start_acquisition(), width=btn_width, height=btn_height)
+    start_btn.grid(row=4, column=0, padx=px, pady=py)
+
+    # Creates the button to pause data collection
+    def pause():
+        if running.get():
+            running.set(False)
+            delta = datetime.datetime.now() - last_update_time[0]
+            time_passed[0] += delta
+    pause_btn = tk.Button(frame, text="Pause", command=lambda:pause(), width=btn_width, height=btn_height)
+    pause_btn.grid(row=4, column=1, padx=px, pady=py)
+
+    # Creates the button to resume data collection
+    def resume():
+        if not running.get():
+            running.set(True)
+            last_update_time[0] = datetime.datetime.now()
+    resume_btn = tk.Button(frame, text="Resume", command=lambda:resume(), width=btn_width, height=btn_height)
+    resume_btn.grid(row=4, column=2, padx=px, pady=py)
+
+    # Creates the button to end data collection
+    def end_acquisition(root):
+        root.destroy()
+        main_menu_gui.open()
+    end_btn = tk.Button(frame, text="End", command=lambda:end_acquisition(root), width=btn_width, height=btn_height)
+    end_btn.grid(row=4, column=3, padx=px, pady=py)
+    return
+
 
 # Opens the main menu -- called by other scripts
-def open(partID, protocol):
+def open_window(partID, protocol):
     root = create_window()
-    add_gui_elements(root)
-    create_storage(partID, protocol)
+    save_path = create_storage(partID, protocol)
+    instructions, parameters = get_instructions()
+    run_experiment(root, save_path, instructions, parameters)
     root.mainloop()
 
 
