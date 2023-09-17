@@ -44,16 +44,17 @@ def add_gui_elements(root):
     frame = tk.Frame(root)
     frame.pack(pady=(window_height//4))
 
-    # Creates the button to exit the program
-    def exit(root):
-        root.destroy()
-    exit_btn = tk.Button(frame, text="Exit", command=lambda:exit(root), width=btn_width, height=btn_height)
+    # Creates the button to end data collection
+    def end_acquisition(root):
+        print("ending")
+    exit_btn = tk.Button(frame, text="End Acquisition", command=lambda:end_acquisition(root), width=btn_width, height=btn_height)
     exit_btn.grid(row=4, column=0, padx=px, pady=py)
     return
 
 # Opens the main menu -- called by other scripts
-def open():
-    
+def open(partID, protocol):
+    print(partID)
+    print(protocol)
     # Creates the window
     root = create_window()
 

@@ -127,10 +127,8 @@ def add_gui_elements(root):
 
         # Creates the button to finish the setup and open the experiment window
         def finish_setup(root): # Function called to finish the setup
-            print(partID)
-            print(protocol)
             root.destroy()
-            experiment_gui.open()
+            experiment_gui.open(partID, protocol)
         finish_btn = tk.Button(frame2, text="Finish Setup", command=lambda:finish_setup(root), width=btn_width, height=btn_height) # Creates the button
         finish_btn.grid(row=6, column=1, padx=px, pady=py) # Places the button
         return

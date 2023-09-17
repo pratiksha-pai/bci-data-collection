@@ -5,13 +5,12 @@ def process_1():
     last_time = time.time()
     sum = 0
     count = 0
-    for i in range(1, 100):
+    for i in range(1, 10000000):
         current_time = time.time()
         elapsed_time = current_time - last_time
         count = count + 1
         sum = sum + elapsed_time
         last_time = current_time
-        time.sleep(0.001)
     avg = sum / count
     print("1: " + str(avg))
 
@@ -25,7 +24,6 @@ def process_2():
         count = count + 1
         sum = sum + elapsed_time
         last_time = current_time
-        time.sleep(0.0001)
     avg = sum / count
     print("2: " + str(avg))
 
@@ -33,13 +31,12 @@ def process_3():
     last_time = time.time()
     sum = 0
     count = 0
-    for i in range(1, 300):
+    for i in range(1, 3000000):
         current_time = time.time()
         elapsed_time = current_time - last_time
         count = count + 1
         sum = sum + elapsed_time
         last_time = current_time
-        time.sleep(0.00001)
     avg = sum / count
     print("3: " + str(avg))
 
