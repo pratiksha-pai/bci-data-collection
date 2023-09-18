@@ -2,6 +2,7 @@
 import tkinter as tk
 import datetime
 import os
+import multiprocessing
 import csv
 from GUIs import main_menu_gui
 
@@ -58,12 +59,43 @@ def get_instructions():
         reader1 = csv.reader(file1)
         for rowa in reader1:
             instructions.append(rowa)
+    instructions.pop(0)
     parameters = []
     with open(parameters_path, 'r') as file2:
         reader2 = csv.reader(file2)
         for rowb in reader2:
             parameters.append(rowb)
     return instructions, parameters   
+
+# Collects the body camera data
+def collect_bodycam(queue):
+    data = [1, 2, 3, 4, 5]
+    queue.put(data)
+
+# Collects the dart camera data
+def collect_dart(queue):
+    data = [1, 2, 3, 4, 5]
+    queue.put(data)
+
+# Collects the glove data
+def collect_gloves(queue):
+    data = [1, 2, 3, 4, 5]
+    queue.put(data)
+
+# Collects the glasses data
+def collect_glasses(queue):
+    data = [1, 2, 3, 4, 5]
+    queue.put(data)
+
+# Collects the EEG data
+def collect_eeg(queue):
+    data = [1, 2, 3, 4, 5]
+    queue.put(data)
+
+# Collects the EMG data
+def collect_emg(queue):
+    data = [1, 2, 3, 4, 5]
+    queue.put(data)
 
 def run_experiment(root, save_path, instructions, parameters):
     # Gets the GUI element parameters parameters
@@ -72,6 +104,8 @@ def run_experiment(root, save_path, instructions, parameters):
     # Stores whether the experiment is running
     running = tk.BooleanVar(root, False)
     started = tk.BooleanVar(root, False)
+    collecting = tk.BooleanVar(root, False)
+    instruction_index = tk.IntVar(root, 0)
     last_update_time = [None]
     time_passed = [datetime.timedelta(0)]
 
@@ -82,6 +116,28 @@ def run_experiment(root, save_path, instructions, parameters):
     # Creates the label that displays the time
     timer_lbl = tk.Label(frame, text="0:00:000")
     timer_lbl.grid(row=0, column=0, padx=px, pady=py)
+
+    # Creates the label that displays the instruction
+    instruction_lbl = tk.Label(frame, text=instructions[0][5])
+    instruction_lbl.grid(row=0, column=1, padx=px, pady=py)
+
+    # Creates the data collection queues
+    queue_bodycam = multiprocessing.Queue()
+    queue_dart = multiprocessing.Queue()
+    queue_gloves = multiprocessing.Queue()
+    queue_glasses = multiprocessing.Queue()
+    queue_eeg = multiprocessing.Queue()
+    queue_emg = multiprocessing.Queue()
+
+
+    # Creates the data collection threads
+    proc_bodycam = multiprocessing.Process(target=collect_bodycam, args=(queue_bodycam,))
+    proc_dart = multiprocessing.Process(target=collect_dart, args=(queue_dart,))
+    proc_gloves = multiprocessing.Process(target=collect_gloves, args=(queue_gloves,))
+    proc_glasses = multiprocessing.Process(target=collect_glasses, args=(queue_glasses,))
+    proc_eeg = multiprocessing.Process(target=collect_eeg, args=(queue_eeg,))
+    proc_emg = multiprocessing.Process(target=collect_emg, args=(queue_emg,))
+
 
     def update_timer_display():
         if running.get():
@@ -95,11 +151,44 @@ def run_experiment(root, save_path, instructions, parameters):
         seconds = int(remainder)
         milliseconds = int((remainder - seconds) * 1000)
 
+        # Checks if a timestamp has been crossed
+        if instruction_index.get() < len(instructions):
+            if total_seconds >= float(instructions[instruction_index.get()][1]):
+                instruction_index.set(instruction_index.get() + 1)
+                instruction_lbl.config(text=instructions[instruction_index.get()][5])
+                state = instructions[instruction_index.get()][6]
+                if state == "Add " and not collecting.get():
+                    # proc_bodycam.start()
+                    # proc_dart.start()
+                    # proc_gloves.start()
+                    # proc_glasses.start()
+                    # proc_eeg.start()
+                    # proc_emg.start()
+                    collecting.set(True)
+                elif state == "Save " and collecting.get():
+                    # proc_bodycam.join()
+                    # proc_dart.join()
+                    # proc_gloves.join()
+                    # proc_glasses.join()
+                    # proc_eeg.join()
+                    # proc_emg.join()
+                    # bodycam_data = queue_bodycam.get()
+                    # dart_data = queue_dart.get()
+                    # gloves_data = queue_gloves.get()
+                    # glasses_data = queue_glasses.get()
+                    # eeg_data = queue_eeg.get()
+                    # emg_data = queue_emg.get()
+                    # print(dart_data)
+                    collecting.set(False)
+                elif state == "End ":
+                    running.set(False)
+        else:
+            instruction_lbl.config(text="experiment finished")
         # Update the display
-        timer_lbl.config(text="{}:{:02}:{:03}".format(minutes, seconds, milliseconds))
+        timer_lbl.config(text="{:02}:{:02}:{:03}".format(minutes, seconds, milliseconds))
             
         # Schedule the function to be called after 50ms for more frequent updates
-        root.after(50, update_timer_display)
+        root.after(10, update_timer_display)
 
     # Creates the button to start data collection
     def start_acquisition():
