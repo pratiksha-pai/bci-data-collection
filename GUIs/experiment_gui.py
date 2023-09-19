@@ -97,7 +97,25 @@ def collect_emg(queue):
     data = [1, 2, 3, 4, 5]
     queue.put(data)
 
+def create_data_collection_processes(queue_bodycam, queue_dart, queue_gloves, queue_glasses, queue_eeg, queue_emg):
+    p_bodycam = multiprocessing.Process(target=collect_bodycam, args=(queue_bodycam,))
+    p_dart = multiprocessing.Process(target=collect_dart, args=(queue_dart,))
+    p_gloves = multiprocessing.Process(target=collect_gloves, args=(queue_gloves,))
+    p_glasses = multiprocessing.Process(target=collect_glasses, args=(queue_glasses,))
+    p_eeg = multiprocessing.Process(target=collect_eeg, args=(queue_eeg,))
+    p_emg = multiprocessing.Process(target=collect_emg, args=(queue_emg,))
+    
+    return p_bodycam, p_dart, p_gloves, p_glasses, p_eeg, p_emg
+
 def run_experiment(root, save_path, instructions, parameters):
+    # Creates the data collection queues
+    queue_bodycam = multiprocessing.Queue()
+    queue_dart = multiprocessing.Queue()
+    queue_gloves = multiprocessing.Queue()
+    queue_glasses = multiprocessing.Queue()
+    queue_eeg = multiprocessing.Queue()
+    queue_emg = multiprocessing.Queue()
+
     # Gets the GUI element parameters parameters
     px, py, btn_width, btn_height, window_height = get_window_properties("gui")
 
@@ -121,23 +139,6 @@ def run_experiment(root, save_path, instructions, parameters):
     instruction_lbl = tk.Label(frame, text=instructions[0][5])
     instruction_lbl.grid(row=0, column=1, padx=px, pady=py)
 
-    # Creates the data collection queues
-    queue_bodycam = multiprocessing.Queue()
-    queue_dart = multiprocessing.Queue()
-    queue_gloves = multiprocessing.Queue()
-    queue_glasses = multiprocessing.Queue()
-    queue_eeg = multiprocessing.Queue()
-    queue_emg = multiprocessing.Queue()
-
-
-    # Creates the data collection threads
-    proc_bodycam = multiprocessing.Process(target=collect_bodycam, args=(queue_bodycam,))
-    proc_dart = multiprocessing.Process(target=collect_dart, args=(queue_dart,))
-    proc_gloves = multiprocessing.Process(target=collect_gloves, args=(queue_gloves,))
-    proc_glasses = multiprocessing.Process(target=collect_glasses, args=(queue_glasses,))
-    proc_eeg = multiprocessing.Process(target=collect_eeg, args=(queue_eeg,))
-    proc_emg = multiprocessing.Process(target=collect_emg, args=(queue_emg,))
-
 
     def update_timer_display():
         if running.get():
@@ -151,6 +152,8 @@ def run_experiment(root, save_path, instructions, parameters):
         seconds = int(remainder)
         milliseconds = int((remainder - seconds) * 1000)
 
+        proc_bodycam, proc_dart, proc_gloves, proc_glasses, proc_eeg, proc_emg = create_data_collection_processes(queue_bodycam, queue_dart, queue_gloves, queue_glasses, queue_eeg, queue_emg)
+
         # Checks if a timestamp has been crossed
         if instruction_index.get() < len(instructions):
             if total_seconds >= float(instructions[instruction_index.get()][1]):
@@ -158,6 +161,7 @@ def run_experiment(root, save_path, instructions, parameters):
                 instruction_lbl.config(text=instructions[instruction_index.get()][5])
                 state = instructions[instruction_index.get()][6]
                 if state == "Add " and not collecting.get():
+                    proc_bodycam, proc_dart, proc_gloves, proc_glasses, proc_eeg, proc_emg = create_data_collection_processes(queue_bodycam, queue_dart, queue_gloves, queue_glasses, queue_eeg, queue_emg)
                     proc_bodycam.start()
                     proc_dart.start()
                     proc_gloves.start()
@@ -166,11 +170,17 @@ def run_experiment(root, save_path, instructions, parameters):
                     proc_emg.start()
                     collecting.set(True)
                 elif state == "Save " and collecting.get():
+                    proc_bodycam.terminate()
                     proc_bodycam.join()
+                    proc_dart.terminate()
                     proc_dart.join()
+                    proc_gloves.terminate()
                     proc_gloves.join()
+                    proc_glasses.terminate()
                     proc_glasses.join()
+                    proc_eeg.terminate()
                     proc_eeg.join()
+                    proc_emg.terminate()
                     proc_emg.join()
                     bodycam_data = queue_bodycam.get()
                     dart_data = queue_dart.get()
@@ -178,7 +188,8 @@ def run_experiment(root, save_path, instructions, parameters):
                     glasses_data = queue_glasses.get()
                     eeg_data = queue_eeg.get()
                     emg_data = queue_emg.get()
-                    print(dart_data)
+                    printable = [bodycam_data, dart_data, gloves_data, glasses_data, eeg_data, emg_data]
+                    print(printable)
                     collecting.set(False)
                 elif state == "End ":
                     running.set(False)
