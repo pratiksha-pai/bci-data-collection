@@ -74,11 +74,23 @@ def collect_bodycam(event, queue):
             data = [1, 2, 3, 4, 5]
             queue.put(data)
 
+# Collects the body camera data
+def collect_eeg(event, queue):
+    while True:
+        if event.is_set():
+            data = [6, 7, 8, 9, 10]
+            queue.put(data)
+
 def run_experiment(root, save_path, instructions, parameters):
-    event = multiprocessing.Event()
+    event_bodycam = multiprocessing.Event()
     queue_bodycam = multiprocessing.Queue()
-    proc_bodycam = multiprocessing.Process(target=collect_bodycam, args=(event,queue_bodycam))
+    proc_bodycam = multiprocessing.Process(target=collect_bodycam, args=(event_bodycam,queue_bodycam))
     proc_bodycam.start()
+
+    event_eeg = multiprocessing.Event()
+    queue_eeg = multiprocessing.Queue()
+    proc_eeg = multiprocessing.Process(target=collect_eeg, args=(event_eeg,queue_eeg))
+    proc_eeg.start()
 
     # Gets the GUI element parameters parameters
     px, py, btn_width, btn_height, window_height = get_window_properties("gui")
@@ -125,14 +137,22 @@ def run_experiment(root, save_path, instructions, parameters):
                 instruction_lbl.config(text=instructions[instruction_index.get()][5])
                 state = instructions[instruction_index.get()][6]
                 if state == "Add " and not collecting.get():
-                    event.set()
+                    event_bodycam.set()
+                    event_eeg.set()
                     collecting.set(True)
                 elif state == "Save " and collecting.get():
-                    event.clear()
+                    event_bodycam.clear()
+                    event_eeg.clear()
                     bodycam_data = queue_bodycam.get()
+                    eeg_data = queue_eeg.get()
                     print(bodycam_data)
+                    print(eeg_data)
                     collecting.set(False)
                 elif state == "End ":
+                    proc_bodycam.terminate()
+                    proc_eeg.terminate()
+                    proc_bodycam.join()
+                    proc_eeg.join()
                     running.set(False)
         else:
             instruction_lbl.config(text="experiment finished")
@@ -171,6 +191,10 @@ def run_experiment(root, save_path, instructions, parameters):
 
     # Creates the button to end data collection
     def end_acquisition(root):
+        proc_bodycam.terminate()
+        proc_eeg.terminate()
+        proc_bodycam.join()
+        proc_eeg.join()
         root.destroy()
         main_menu_gui.open()
     end_btn = tk.Button(frame, text="End", command=lambda:end_acquisition(root), width=btn_width, height=btn_height)
