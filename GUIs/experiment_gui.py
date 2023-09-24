@@ -68,30 +68,17 @@ def get_instructions():
     return instructions, parameters   
 
 # Collects the body camera data
-def collect_bodycam(queue):
-    data = [1, 2, 3, 4, 5]
-
-# Collects the dart camera data
-def collect_dart(queue):
-    data = [1, 2, 3, 4, 5]
-
-# Collects the glove data
-def collect_gloves(queue):
-    data = [1, 2, 3, 4, 5]
-
-# Collects the glasses data
-def collect_glasses(queue):
-    data = [1, 2, 3, 4, 5]
-
-# Collects the EEG data
-def collect_eeg(queue):
-    data = [1, 2, 3, 4, 5]
-
-# Collects the EMG data
-def collect_emg(queue):
-    data = [1, 2, 3, 4, 5]
+def collect_bodycam(event, queue):
+    while True:
+        if event.is_set():
+            data = [1, 2, 3, 4, 5]
+            queue.put(data)
 
 def run_experiment(root, save_path, instructions, parameters):
+    event = multiprocessing.Event()
+    queue_bodycam = multiprocessing.Queue()
+    proc_bodycam = multiprocessing.Process(target=collect_bodycam, args=(event,queue_bodycam))
+    proc_bodycam.start()
 
     # Gets the GUI element parameters parameters
     px, py, btn_width, btn_height, window_height = get_window_properties("gui")
@@ -129,6 +116,8 @@ def run_experiment(root, save_path, instructions, parameters):
         seconds = int(remainder)
         milliseconds = int((remainder - seconds) * 1000)
 
+        
+
         # Checks if a timestamp has been crossed
         if instruction_index.get() < len(instructions):
             if total_seconds >= float(instructions[instruction_index.get()][1]):
@@ -136,10 +125,12 @@ def run_experiment(root, save_path, instructions, parameters):
                 instruction_lbl.config(text=instructions[instruction_index.get()][5])
                 state = instructions[instruction_index.get()][6]
                 if state == "Add " and not collecting.get():
-                    
+                    event.set()
                     collecting.set(True)
                 elif state == "Save " and collecting.get():
-                    
+                    event.clear()
+                    bodycam_data = queue_bodycam.get()
+                    print(bodycam_data)
                     collecting.set(False)
                 elif state == "End ":
                     running.set(False)
