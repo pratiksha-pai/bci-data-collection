@@ -6,6 +6,11 @@ import multiprocessing
 import csv
 from GUIs import main_menu_gui
 
+# import from outside the folder
+import sys
+# sys.path.append(r'c:\Users\Data acquisition\sensorimotorkit')
+from sensorimotorkit import acquire_images
+
 # Stores all the properties of the windows in one place to make changes easier
 def get_window_properties(prop):
 
@@ -43,7 +48,7 @@ def create_storage(partID, protocol):
     current_date = datetime.datetime.now()
     formatted_date = current_date.strftime('%Y%m%d%H%M%S')
     folderID = protocol + "_" + formatted_date + "_" + partID
-    base_path = "/Users/jackmostyn/Lab Scripts/bci-data-collection/Data"
+    base_path = "C:/Users/Data acquisition/bci-data-collection/Data"
     folder_path = base_path + "/" + folderID
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
@@ -51,7 +56,7 @@ def create_storage(partID, protocol):
 
 # Gets the instructions for data collection
 def get_instructions():
-    protocol_path = "/Users/jackmostyn/Lab Scripts/bci-data-collection/Protocols/Main"
+    protocol_path = "C:/Users/Data acquisition/bci-data-collection/Protocols/Main"
     instructions_path = protocol_path + "/Instructions.csv"
     parameters_path = protocol_path + "/Parameters.csv"
     instructions = []
@@ -72,6 +77,7 @@ def collect_bodycam(event, queue):
     while True:
         if event.is_set():
             data = [1, 2, 3, 4, 5]
+            
             queue.put(data)
 
 # Collects the body camera data
