@@ -1,5 +1,6 @@
 import socket
 import time
+import csv
 
 def get_glove_port_number(hand):
     if hand == "right":
@@ -30,7 +31,7 @@ def get_data(t, sock, ip, port):
     except Exception as e:
         return "nothing", t
 
-def collect(seconds):
+def collect(seconds, save_path):
 
     # Set the IP address and port number to send to
     ip = get_glove_ip()
@@ -50,4 +51,10 @@ def collect(seconds):
         new_data, t = get_data(t, sock, ip, port)
         output.append(new_data)
 
-    print(output)
+    glove_file_name = "gloves.csv"
+    glove_path = save_path + "/" + glove_file_name
+    with open(glove_path, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        for row in output:
+            writer.writerow(row)
+    print("saved glove data")

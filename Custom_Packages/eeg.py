@@ -1,5 +1,6 @@
 import time
 import brainflow
+import csv
 from brainflow.board_shim import BoardShim, BrainFlowInputParams
 from brainflow.exit_codes import BrainFlowExitCodes
 
@@ -41,7 +42,13 @@ def collect_eeg_data(duration):
         print(f"An error occurred: {e}")
         return None
 
-def collect_eeg(duration):
+def collect(duration, save_path):
     eeg_data = collect_eeg_data(duration)
-    if eeg_data is not None:
-        print(eeg_data)
+    print(len(eeg_data))
+    print(len(eeg_data[0]))
+    eeg_file_name = "eeg.csv"
+    glove_path = save_path + "/" + eeg_file_name
+    with open(glove_path, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        for row in eeg_data:
+            writer.writerow(row)
